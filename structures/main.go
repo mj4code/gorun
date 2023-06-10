@@ -10,6 +10,11 @@ type Car struct {
 	cost   int
 }
 
+//Embedded structures
+type Vehicle struct {
+	Car
+}
+
 func main() {
 
 	toyota := Car{
@@ -30,4 +35,8 @@ func main() {
 	}
 
 	fmt.Println(tesla.Manufacturer)
+
+	v := Vehicle{}
+	v.wheels = 4
+	fmt.Println(v)
 }
